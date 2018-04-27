@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 
+#use Math::Utils 'ceil';
 #-------------------------------------------------------------------------------
 # BDS generic cluster example
 #
@@ -50,12 +51,12 @@ if( $cpus > 0 ) {
 }
 
 if( $mem > 0 ) {
-	$mem = ceil($mem/1000000); # MB
+	$mem = $mem/1000000; # MB
 	$qsub .= "-M $mem ";
 }
 
 if( $timeout > 0 ) {
-	$timeout = ceil($timeout/60); # minute
+	$timeout = $timeout/60; # minute
 	$qsub .= "-W $timeout ";
 }
 

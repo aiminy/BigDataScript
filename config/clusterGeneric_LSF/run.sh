@@ -11,4 +11,4 @@ echo "$7" | bsub  \
 	-W $3 \
 	-n $4 \
 	-q $5 \
-	-R "rusage[mem="$6"] span[ptile=8]"
+	-R "rusage[mem="$6"] span[ptile=16]"
